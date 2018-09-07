@@ -6,9 +6,9 @@ function test(){
 	var devicepass=document.getElementById("d_pass").value;
 	var mnum=document.getElementById("mnum").value;
     // Add a new document in collection "cities"
-    db.collection("Register").doc(name).set({
-        mail: mail,
-        deviceid: deviceid,
+    db.collection("Register").doc(deviceid).set({
+        Name: name,
+		mail: mail,
 		devicepass: devicepass,
 		mnum: mnum
     })
@@ -19,4 +19,13 @@ function test(){
     .catch(function(error) {
         console.error("Error writing document: ", error);
     });
+	writeUserData(deviceid,name,mail)
+}
+
+function writeUserData(userId, username, useremail) {
+  firebase.database().ref('users/' + userId).set({
+    email: useremail,
+	username: username,
+  });
+  window.alert("Real Time Database Also Written")
 }
