@@ -1,0 +1,31 @@
+<html>
+<head>
+		<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+</head>
+<body>
+<input type="text" placeholder="Name" id="name"/>
+<input type="text" placeholder="Email" id="email"/>
+<input type="text" placeholder="Device ID" id="d_id"/>
+<input type="text" placeholder="Device Password" id="d_pass"/>
+<input type="text" placeholder="Mobile Number" id="mnum"/>
+<button onclick="test()">Submit</button>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCTNFI-1eT0dlrzpghEwlBEh1lpeFhZkYY",
+    authDomain: "bwregister-d98f4.firebaseapp.com",
+    databaseURL: "https://bwregister-d98f4.firebaseio.com",
+    projectId: "bwregister-d98f4",
+    storageBucket: "bwregister-d98f4.appspot.com",
+    messagingSenderId: "199256955629"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="index.js"></script>
+</body>
+</html>
