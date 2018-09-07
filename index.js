@@ -25,7 +25,7 @@ function test(){
 function writeUserData(userId, username, useremail) {
   firebase.database().ref('users/' + userId).set({
     email: useremail,
-	username: username,
+    username: username
   });
   window.alert("Real Time Database Also Written")
 }
